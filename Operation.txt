@@ -1,0 +1,8 @@
+1. Copy your release key somewhere (keybutler_1.keystore to customer_key.keystore)
+2. Change the keystore password/key password and key alias following the instructions here
+	2-1 keytool -storepasswd -keystore customer_key.keystore (original pass is android)
+	2-2 keytool -keypasswd -keystore customer_key.keystore -alias keybutler_1.keystore (original pass is android)
+	2-3 keytool -changealias -keystore customer_key.keystore -alias keybutler_1.keystore -destalias androiddebugkey (change to the debug.keystore's alias name)
+
+
+3. Change Eclipse's Preferences -> Android -> Build -> Custom keystore setting to the path of the file in step 1.
